@@ -6,57 +6,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Market Resaerch Survey </title>
   <style>
-    .age-range-dropdown {
-      width: 200px;
-    }
-    .age-question {
+    header h2 {
       margin-top: 0;
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
+    header div {
+      margin-top: 8px;
+      color: gray;
+      margin-bottom: 8px;
+    }
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+    
+    }
+    ul li {
+      line-height: 30px;
+    }
+  
+    
+    .dropdown-box {
+      width: 50%;
+      height: 25px;
+    }
+    .lable-of-questions {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .gender-title {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  .input-dollar {
+    width: 50px;
+  }
+  .input-cents {
+    width: 20px;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table tr:nth-child(odd) {
+    background-color: rgb(167, 165, 165);
+  } 
+  
   </style>
 </head>
 <body>
-  <p style="font-size: 25px;  margin-top: 0; margin-bottom: 0;">
-    Market Research Survey
-  </p>
-  <p style="margin-top: 5px; color: gray;">
-    Please take a few moments to complete this satisfaction survey.
-  </p>
-  <hr style="opacity: 0.4; ">
-  <p class="age-question">
-    What is your age range?
-  </p>
-  <br>
-  <select class="age-range-dropdown" name="Age" id="">
-    <option value="18-24">18-24</option>
-    <option value="25-34">25-34</option>
-    <option value="35-50">35-50</option>
-    <option value="50+">50+</option>
-  </select>
-  <p>
-    What is your yearly income range?
-  </p>
-  <br>
-  <select name="income" id="">
-    <option value="0-25.000">&#36;0 - &#36;25,000</option>
-    <option value="25.001-50.000">&#36;25,001 - &#36;50,000</option>
-    <option value="50.001-100.000">&#36;50,001 - &#36;100,000</option>
-    <option value="100.000+">&#36;100,000+</option>
-  </select>
-  <p>
-    Gender Identity
-  </p>
-  <input type="radio" name="gender">Male <br>
-  <input type="radio" name="gender">Female <br>
-  <input type="radio" name="gender">Nonbinary <br>
-  <input type="radio" name="gender">Other <br>
-  <input type="text" size="15" style="display: block; margin-left: 20px;">
-  <p>
-    Which of the following products have your purchased in the last 2 months. Please check all that apply.
-  </p>
-  <input type="checkbox">Product 1 <br>
-  <input type="checkbox">Product 2<br>
-  <input type="checkbox">Product 3 <br>
+  <header>
+    <h2 class="title">Market Research Survey</h2>
+    <div class="description">Please take a few moments to complete this satisfaction survey.</div>
+    <hr>
+  </header>
+  <form action="">
+  <ul>
+    <li>
+     <label for="age-range" class="lable-of-questions">What is your age range?</label>
+     <div>
+       <select class="dropdown-box" id="age-range">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+       </select>
+     </div>
+    </li>
+    <li>
+      <label for="income-range" class="lable-of-questions">What is your yearly income range?</label>
+      <div>
+      <select class="dropdown-box" id="income-range">
+        <option value="0-25.000">&#36;0 - &#36;25,000</option>
+        <option value="25.001-50.000">&#36;25,001 - &#36;50,000</option>
+        <option value="50.001-100.000">&#36;50,001 - &#36;100,000</option>
+        <option value="100.000+">&#36;100,000+</option>
+      </select>
+      </div>
+    </li>
+    <li>
+      <p class="gender-title">Gender Identity</p>
+      <div>
+        <div>
+          <input type="radio" name="gender" id="Male"> 
+          <label for="Male">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Male</span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="Female"> 
+          <label for="Female">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Female</span>
+          </label>
+        </div>
+        
+        <div>
+          <input type="radio" name="gender" id="Nonbinary"> 
+          <label for="Nonbinary">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Nonbinary</span>
+          </label>
+        </div>
+        
+        <div>
+          
+          <input type="radio" name="gender" id="Other"> 
+        
+          <label for="Other">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Other</span>
+          </label>
+          
+        </div>
+          <input style="margin-left: 20px;" type="text">
+         <p id="nhapvao" style="margin: 0; padding: 0; font-size: 13px; margin-left: 20px; "><i>Maximum of 250 characters. 	&nbsp; 	&nbsp; 	&nbsp; Currently Used: 0 characters.</i></p> 
+       
+        </div>
+    </li>
+    <li>
+      <p class="gender-title">Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+      <div>
+        <div>
+          <input type="checkbox" name="product" id="product1"> 
+          <label for="product1">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Product 1</span>
+          </label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="product" id="product2"> 
+          <label for="product2">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Product 2</span>
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" name="product" id="product3"> 
+          <label for="product3">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Product 3</span>
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p class="gender-title">How often would you use our new product?</p>
+      <div>
+        <div>
+          <input type="radio" name="frequency" id="Daily"> 
+          <label for="Daily">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Daily</span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" name="frequency" id="Weekly"> 
+          <label for="Weekly">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Weekly</span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" name="frequency" id="Monthly"> 
+          <label for="Monthly">
+          <span style="padding-right: 50%; padding-bottom: 8px;">Monthly</span>
+          </label>
+        </div>
+      </div>
+    </li>
+    <li>
+      <p class="gender-title">What would you pay for the new product?</p>
+      <div>
+        <span>&dollar; 
+          <input class="input-dollar" type="text" name="" id="">
+          &middot;
+          <input class="input-cents" type="text" name="" id="">
+          
+        </span>
+      </div>
+      <span style="font-size: 14px;">
+        &nbsp;	&nbsp; 	&nbsp;	Dollars 	&nbsp;	&nbsp;	&nbsp;		Cents
+      </span>
+     
+    </li>
+
+    <li>
+      <p  class="gender-title">What features would you like to see in the new product.</p>
+      <textarea name="" id="" cols="185px" rows="10"></textarea>
+    </li>
+    <li>
+        <p>
+        
+          Please rate your level of agreement with the following statements.
+        </p>
+        <table border="1">
+         <tr>
+           <th style="width: 40%;"></th>
+           <th style="width: 15%;">Strongly Disagree</th>
+           <th style="width: 15%;">Disagree</th>
+           <th style="width: 15%;">Agree</th>
+           <th style="width: 15%;">Strongly Agree</th>
+         </tr>
+         <tr>
+           <div class="hang-1">
+           <td style="text-align: left;">Our products are priced fairly.</td>
+           <td style="line-height: 15px;">
+                <div><input type="radio" name="fairly"></div>
+                <span>1</span>
+          </td> 
+          <td style="line-height: 15px;">
+            <div><input type="radio" name="fairly"></div>
+            <span>2</span>
+         </td> 
+         <td style="line-height: 15px;">
+          <div><input type="radio" name="fairly"></div>
+          <span>3</span>
+        </td>                   
+        <td style="line-height: 15px;">
+          <div><input type="radio" name="fairly"></div>
+          <span>4</span>
+        </td>   
+      </div>
+         </tr>
+        
+         <tr>
+          <td style="text-align: left;">Our products are high quality.</td>
+          <td style="line-height: 15px;">
+               <div><input type="radio" name="quality"></div>
+               <span>1</span>
+         </td> 
+         <td style="line-height: 15px;">
+           <div><input type="radio" name="quality"></div>
+           <span>2</span>
+        </td> 
+        <td style="line-height: 15px;">
+         <div><input type="radio" name="quality"></div>
+         <span>3</span>
+       </td>                   
+       <td style="line-height: 15px;">
+         <div><input type="radio" name="quality"></div>
+         <span>4</span>
+       </td>   
+       
+        </tr>
+
+        <tr>
+          <td style="text-align: left;">You would recommend our product to a friend or coworker.</td>
+          <td style="line-height: 15px;">
+               <div><input type="radio" name="recommend"></div>
+               <span>1</span>
+         </td> 
+         <td style="line-height: 15px;">
+           <div><input type="radio" name="recommend"></div>
+           <span>2</span>
+        </td> 
+        <td style="line-height: 15px;">
+         <div><input type="radio" name="recommend"></div>
+         <span>3</span>
+       </td>                   
+       <td style="line-height: 15px;">
+         <div><input type="radio" name="recommend"></div>
+         <span>4</span>
+       </td>   
+          
+        </tr>
+        </table>
+    </li>
+    <li>
+      <input type="submit">
+      <input type="reset">
+    </li>
+  </ul>
+</form>
+  
   
 </body>
 </html>
