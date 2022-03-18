@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p onclick="lam ()">Click here</p>
+  <p id="demo">click</p>
+</body>
+</html>
+<script>
+  function lam() {
+    alert("hello world")
+  }
+  let demo = document.getElementById("demo");
+  demo.addEventListener("click", clickFunction);
+  function clickFunction() {
+    alert("Xin chao nguoi dep");
+  }
+
+</script>
