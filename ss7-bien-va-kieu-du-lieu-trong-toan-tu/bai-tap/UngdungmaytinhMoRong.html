@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Caculator</title>
+</head>
+
+<body>
+  <h1>
+    Caculator
+  </h1>
+  <div>
+
+    <input id="so1" type="number">
+    <input id="so2" type="number">
+    <p>
+      <button class="tinhtoan" value="1" onclick="tinhtoan('1')">Addiition(+)</button>
+      <button class="tinhtoan" value="2" onclick="tinhtoan('2')">Subtraction(-)</button>
+      <button class="tinhtoan" value="3" onclick="tinhtoan('3')">Multiplication(x)</button>
+      <button  onclick="tinhtoan('4')">Division(/)</button>
+    </p>
+
+  </div>
+  <p id="result">Result Division :</p>
+</body>
+<script>
+  function tinhtoan(str) {
+    let so1 = document.getElementById("so1").value;
+    so1 = parseFloat(so1);
+    let so2 = document.getElementById("so2").value;
+    so2 = parseFloat(so2);
+    if (str == 1) {
+      ketqua = so1 + so2;
+
+      let result = document.getElementById("result");
+      result.innerHTML = "Result Division :" + ketqua;
+    }
+    else if (str == 2) {
+      ketqua = so1 - so2;
+      let result = document.getElementById("result");
+      result.innerHTML = "Result Division :" + ketqua;
+
+    }
+    else if (str == 3) {
+      ketqua = so1 * so2;
+      let result = document.getElementById("result");
+      result.innerHTML = "Result Division :" + ketqua;
+    }
+     
+    else {
+      ketqua = so1 / so2;
+      let result = document.getElementById("result");
+      result.innerHTML = "Result Division :" + ketqua;
+    }
+    
+    
+    
+  }
+</script>
+
+</html>

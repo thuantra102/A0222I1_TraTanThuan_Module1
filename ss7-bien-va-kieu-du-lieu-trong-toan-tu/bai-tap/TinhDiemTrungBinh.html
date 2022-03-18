@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Chào mừng đến với chương tính hộ điểm bạn</h3>
+</body>
+</html>
+<script>
+  let diemSinh = parseInt(prompt("Hãy nhập điểm môn Sinh của bạn vào dây "));
+  let diemVatly = parseInt(prompt("Còn h là điểm Vật lý nha"));
+  let diemHoa = parseInt(prompt("Và Hóa bạn được bao nhiêu nè"))
+  let trungBinh = (diemHoa + diemSinh + diemVatly) / 3;
+  
+  trungBinh = trungBinh.toFixed(2)
+  
+  let tong = diemHoa + diemSinh + diemVatly;
+
+  document.write("Ok và đây là trung bình cộng của bạn " + trungBinh);
+
+ 
+  document.write('<br/>');
+  document.write('Tổng điểm 3 môn của bạn là ' + tong)
+</script>

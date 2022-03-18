@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Caculator</title>
+</head>
+<body>
+  <h1>
+    Caculator
+  </h1>
+ <div>
+
+     <input id="so1" type="number">
+     <input id="so2" type="number">
+      <p>
+        <!-- <button  onclick="cong()">Addition(+)</button> -->
+     <input  id="cong" type="submit" value="Addition(+)" onclick="cong()">
+     <input id="tru" type="submit" value="Subtraction(-)" onclick="tru()">
+     <input id="nhan" type="submit" value="Multiplication(x)" onclick="nhan()">
+     <input id="chia" type="submit" value="Division(/)" onclick="chia()">
+    </p>
+
+ </div>
+    <p id="result">Result Division :</p>
+</body>
+</html>
+<script>
+  function cong() {
+    let so1 = document.getElementById("so1").value;
+    so1 = parseFloat(so1);
+    let so2 = document.getElementById("so2").value;
+    so2 = parseFloat(so2);
+    ketqua = so1 + so2;
+    let result = document.getElementById("result");
+    result.innerHTML = "Result Division :" + ketqua;
+  }
+
+  function tru() {
+    let so1 = document.getElementById("so1").value;
+    so1 = parseFloat(so1);
+    let so2 = document.getElementById("so2").value;
+    so2 = parseFloat(so2);
+    ketqua = so1 - so2;
+    let result = document.getElementById("result");
+    result.innerHTML = "Result Division :" + ketqua;
+  }
+
+  function nhan() {
+    let so1 = document.getElementById("so1").value;
+    so1 = parseFloat(so1);
+    let so2 = document.getElementById("so2").value;
+    so2 = parseFloat(so2);
+    ketqua = so1 * so2;
+    let result = document.getElementById("result");
+    result.innerHTML = "Result Division :" + ketqua;
+  }
+
+  function chia() {
+    let so1 = document.getElementById("so1").value;
+    so1 = parseFloat(so1);
+    let so2 = document.getElementById("so2").value;
+    so2 = parseFloat(so2);
+    ketqua = so1 / so2;
+    let result = document.getElementById("result");
+    result.innerHTML = "Result Division :" + ketqua;
+  }
+</script>

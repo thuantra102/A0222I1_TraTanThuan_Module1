@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyển độ C sang độ F và ngược lại</title>
+  <style>
+    .chon-button {
+      width: 140px;
+    }
+
+    .language-select {
+      margin-left: 140px;
+      display: inline;
+      background-color: white;
+    }
+
+    .tieude {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .phandau {
+      background-color: rgb(172, 114, 7);
+      color: white;
+      height: 80px;
+      margin-top: 0;
+    }
+
+    .dong2 {
+      margin-top: 5px;
+    }
+
+    .o-nhiet-do {
+      width: 100%;
+      height: 150px;
+      background-color: rgb(14, 104, 207);
+
+    }
+
+    .nhap-so {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
+    }
+
+    .chuyendoi-button {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="phandau">
+    <h1 class="tieude">Metric Conversions.</h1>
+
+    <div class="dong2">
+      <span class="chitiet">
+        Chuyển đổi đơn vị đo lường > Công cụ chuyển đổi đơn vị đo lường > Công cụ chuyển đổi nhiệt độ > chuyển
+        đổi Độ C > Độ C sang Độ F
+      </span>
+      <div class="language-select">
+
+        <span style="color: gray;">Ngôn ngữ</span>
+        <select class="chon-button">
+          <option value="tienganh">English</option>
+          <option value="tiengviet">Tiếng việt</option>
+          <option value="tiengnhat">Japan</option>
+          <option value="tiengtrung">Chinese</option>
+        </select>
+
+      </div>
+    </div>
+  </header>
+  <div class="o-nhiet-do">
+
+    <p id="title1" style="font-size: 18px; color: white; text-align: center;">Chuyển đổi Độ C sang Độ F</p>
+
+    <input type="number" class="nhap-so" id="nhap-do-c" placeholder="&#8451;">
+    <div class="chuyendoi-button">
+      <input type="button" value="Chuyển đổi" id="" onclick="chuyendoi()">
+
+      <button id="convert" onclick="convert()">C sang F</button>
+
+    </div>
+    <p id="fdo" style="font-size: 18px; color: white; text-align: center;">
+      Độ F của bạn là: &nbsp;
+    </p>
+
+  </div>
+</body>
+
+<script>
+  let isCtoF = true;
+  let doc = document.getElementById("nhap-do-c");
+  let fdo = document.getElementById("fdo")
+  
+  function convert() {
+    isCtoF = !isCtoF
+    document.getElementById("convert").innerText = isCtoF ?
+      ('C sang F') : ('F sang C')
+    doc.placeholder = isCtoF ? ('°C') : ('°F')
+    document.getElementById("title1").innerHTML = isCtoF
+      ? 'Chuyển đổi Độ C sang Độ F' : 'Chuyển đổi Độ F sang Độ C'
+    fdo.innerHTML = `Độ ${isCtoF ? 'F' : 'C'} của bạn là:	&nbsp;`;
+  }
+  function chuyendoi() {
+
+    let dof = isCtoF ? (1.8 * doc.value + 32) : ((5 / 9) * (doc.value - 32));
+    dof = dof.toFixed(2)
+    fdo.innerHTML = `Độ ${isCtoF ? 'F' : 'C'} của bạn là:	&nbsp;` + dof + `${isCtoF ? '°F' : '°C'}` ;
+  }
+
+</script>
+
+</html>
