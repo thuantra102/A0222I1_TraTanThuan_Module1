@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+<p  >Số phút bạn gọi là</p>
+<input type="number" id="sophut">
+<br>
+<button onclick="tinhTien()" style="margin-top: 9px;">Tính số tiền cần phải trả</button>
+<br>
+<p id="ketluan">
+
+</p>
+<p style="margin-top: 10px;">
+  Chú thích 
+</p>
+<p>
+  Phí thuê bao bắt buộc là 25 nghìn.
+</p>
+<p>
+  600 đồng cho mỗi gọi của 50 phút đầu tiên.
+</p>
+<p>
+  400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+</p>
+<p>
+  200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.
+</p>
+
+
+</body>
+<script>
+  function tinhTien() {
+    let soPhut = document.getElementById('sophut').value;
+    let ketLuan = document.getElementById('ketluan')
+    soPhutTren50Phut = soPhut - 50 ;
+    soPhutTren200Phut = soPhut - 200 ;
+    
+
+    soPhut = parseInt(soPhut);
+    if (soPhut <= 50) {
+      tongTien = (soPhut * 600) + 25000;
+      ketLuan.innerHTML = "Số tiền cần phải trả là " + tongTien + " VND"
+    }
+    else if ( soPhut > 50 && soPhut <= 200) {
+      
+      tongTien = (50 * 600) + (soPhutTren50Phut * 400) + 25000;
+      ketLuan.innerHTML = "Số tiền cần phải trả là " + tongTien + " VND"
+    }
+    else {
+      tongTien =(50 * 600) +  (150 * 400) + (soPhutTren200Phut * 200) + 25000  ;
+      ketLuan.innerHTML = "Số tiền cần phải trả là " + tongTien + " VND"
+    }
+  }
+</script>
+</html>

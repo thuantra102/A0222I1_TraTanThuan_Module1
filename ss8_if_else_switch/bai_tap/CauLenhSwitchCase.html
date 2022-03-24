@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="thang" type="number">
+  <button onclick="tinhSoNgay()">Tính số ngày </button>
+  <p id="ketluan">Số ngày của tháng là</p>
+</body>
+<script>
+  
+  function tinhSoNgay() {
+    let soThang = document.getElementById("thang").value;
+    soThang = parseInt(soThang)
+    let ketLuan = document.getElementById("ketluan")
+    switch (soThang) {
+      case 1: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 2: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; 28 ngày hoặc 29 ngày "
+      break;
+      case 3: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 4: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 30 ngày "
+      break;
+      case 1: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 5: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 6: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 30 ngày "
+      break;
+      case 7: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 8: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 9: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 30 ngày "
+      break;
+      case 10: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      case 11: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 30 ngày "
+      break;
+      case 12: 
+      ketLuan.innerHTML = "Tháng &nbsp;" + soThang + "&nbsp; có 31 ngày "
+      break;
+      default: 
+      ketLuan.innerHTML = "Tháng không hợp lệ"
+    }
+  }
+  
+</script>
+</html>

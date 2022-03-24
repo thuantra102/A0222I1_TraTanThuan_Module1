@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Nhập số a</p>
+  <input id="number-a" type="number"> <br>
+  <p>Nhập số b </p>
+  <input id="number-b" type="number"> <br>
+  <button style="margin-top: 5px;" onclick="kiemTra()">
+    Kiểm tra
+  </button>
+  
+  <p id="ketluan"></p>
+</body>
+<script>
+  function kiemTra() {
+    let a = document.getElementById("number-a").value;
+    a = parseInt(a)
+    let b = document.getElementById("number-b").value;
+    b = parseInt(b)
+    let ketLuan = document.getElementById("ketluan")
+    let x = a % b ;
+    if (x == 0)  {
+      ketLuan.innerHTML = " Chia hết "
+    }
+    else {
+      ketLuan.innerHTML = " Không chia hết "
+    }  
+  }
+</script>
+</html>

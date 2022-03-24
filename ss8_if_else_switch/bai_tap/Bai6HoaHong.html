@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  // doanh so ma tu 0 den 10 tr thi hoa hong 10 % 
+  // doanh so ma tu 10tr den 50 tr thi hoa hong la 20 %
+  // doanh so ma tren 50tr thi hoa hong la 30 %
+  let doanhSo = parseInt(prompt('Doanh sô của bạn là bao nhiêu'));
+  if (doanhSo > 0 && doanhSo <= 10000000) {
+    hoaHong = doanhSo * (10/100);
+    document.write("Hoa hồng của bạn là " + hoaHong + " VND")
+  }
+  else if (doanhSo > 10000000 && doanhSo <= 50000000 ) {
+    hoaHong = doanhSo * (20/100);
+    document.write("Hoa hồng của bạn là " + hoaHong + " VND")
+  }
+  else {
+    hoaHong = doanhSo * (30/100);
+    document.write("Hoa hồng của bạn là " + hoaHong + " VND")
+  }
+
+</script>
+</html>

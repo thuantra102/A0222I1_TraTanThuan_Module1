@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .form-may-tinh {
+      border: solid 5px black;
+      width:  250px;
+      height: 200px;
+      padding-left: 25px;
+      padding-top: 5px;
+    }
+  .o {
+    width: 50px;
+    height: 30px;
+    color: blue;
+    margin-top: 8px;
+    margin-right: 3px;
+  }
+  .nhapdulieu {
+    width: 215px;;
+    text-align: right;
+    
+  }
+  </style>
+</head>
+<body>
+  <div class="form-may-tinh">
+    <div>
+      <input type="text" class="nhapdulieu" placeholder="Caculator" id="nhap">
+    </div>
+    <table class="bang">
+     <tr>
+       <td>
+         <input type="submit" value="7" class="o" onclick="nhap.value = this.value">
+       </td>
+       <td>
+        <input type="submit" value="8" class="o" onclick="nhap.value+= this.value">
+      </td>
+      <td>
+        <input type="submit" value="9" class="o" onclick="nhap.value+= this.value">
+      </td>
+      <td>
+        <input type="submit" value="/" class="o" onclick="nhap.value+= this.value">
+      </td>
+     </tr>
+     
+     <tr>
+      <td>
+        <input type="submit" value="4" class="o" onclick="nhap.value+= this.value">
+      </td>
+      <td>
+       <input type="submit" value="5" class="o" onclick="nhap.value+= this.value">
+     </td>
+     <td>
+       <input type="submit" value="6" class="o" onclick="nhap.value+= this.value">
+     </td>
+     <td>
+       <input type="submit" value="*" class="o" onclick="nhap.value+= this.value"> 
+     </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="submit" value="1" class="o" onclick="nhap.value+= this.value">
+      </td>
+      <td>
+       <input type="submit" value="2" class="o" onclick="nhap.value+= this.value">
+     </td>
+     <td>
+       <input type="submit" value="3" class="o" onclick="nhap.value+= this.value">
+     </td>
+     <td>
+       <input type="submit" value="-" class="o" onclick="nhap.value+= this.value">
+     </td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="submit" value="0" class="o" onclick="nhap.value+= this.value">
+      </td>
+      <td>
+       <input type="submit" value="C" class="o" onclick="nhap.value= '' ">
+     </td>
+     <td>
+       <input type="submit" value="=" class="o"onclick="nhap.value = eval(nhap.value)">
+     </td>
+     <td>
+       <input type="submit" value="+" class="o" onclick="nhap.value+= this.value">
+     </td>
+    </tr>
+    </table>
+  </div>
+</body>
+</html>
