@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      background-color: rgb(30, 104, 241);
+      color: white;
+      padding: 5px 8px;
+      border: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<h4>CHƯƠNG TRÌNH TÍNH TIỀN ĐIỆN</h4>
+<p>Số kwh</p>
+<input type="number" id="kwh" placeholder="kwh">
+<br>
+<button onclick="soTien()" >Số tiền</button>
+<p id="ketluan" style="color: rgb(3, 45, 122); "></p>
+
+</body>
+<script>
+  function soTien() {
+    let kwh = document.getElementById('kwh').value;
+    kwh = parseInt(kwh)
+    let ketLuan = document.getElementById('ketluan')
+    if (kwh > 0 && kwh <= 50) {
+      alert("Giá bán điện với 50kwh đầu tiên là 1.687 đồng");
+      let vnd = kwh * 1.687
+      vnd = vnd.toFixed(3);
+      ketLuan.innerHTML = "Số tiền bạn cần phải trả là " + vnd  + " VND"
+    }
+    else if (kwh > 50 && kwh <= 100 ) {
+      alert("Giá bán điện với 50kwh đầu tiên là 1.687 đồng/kwh và từ 50kwh đến 100kwh là 1.734 đồng/kwh" );
+      let vnd = (50 * 1.687) + (kwh - 50) * 1.734
+      vnd = vnd.toFixed(3);
+      ketLuan.innerHTML = "Số tiền bạn cần phải trả là " + vnd  + " VND"
+    }
+    else {
+      alert("Giá bán điện với 50kwh đầu tiên là 1.687 đồng/kwh và từ 50kwh đến 100kwh là 1.734 đồng/kwh và trên 100kwh thì giá tiền bằng 2.014 vnd/kwh" );
+      let vnd = (50 * 1.687) + (50 * 1.734) + (kwh - 100) * 2.014
+      vnd = vnd.toFixed(3);
+      ketLuan.innerHTML = "Số tiền bạn cần phải trả là " + vnd  + " VND"
+    }
+  }
+</script>
+</html>

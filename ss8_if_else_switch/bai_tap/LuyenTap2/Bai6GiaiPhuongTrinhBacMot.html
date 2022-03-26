@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #ketqua {
+      background-color: rgb(30, 104, 241);
+      color: white;
+      padding: 5px 8px;
+      border: none;
+      margin-top: 10px;
+    }
+    div {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Giải phương trình bậc nhất</h2>
+  <p>Nhập các tham số của phương trình ax + b = 0</p>
+  <div>a = <input type="number" id="a"></div>
+  <div>
+    b = <input type="number" id="b" >
+  </div>
+  <button id="ketqua" onclick="ketQua()">
+    Kết quả
+  </button>
+  <p style="color: rgb(3, 45, 122); " id="ketluan"></p>
+</body>
+<script>
+  function ketQua() {
+    let a = document.getElementById('a').value; 
+    a = parseInt(a)
+    let b = document.getElementById('b').value; 
+    b = parseInt(b)
+    let x = -b / a;
+    let ketLuan = document.getElementById('ketluan');
+    ketLuan.innerHTML = ("Kết quả: Phương trình có nghiệm duy nhất x = " + x)
+  }
+</script>
+</html>

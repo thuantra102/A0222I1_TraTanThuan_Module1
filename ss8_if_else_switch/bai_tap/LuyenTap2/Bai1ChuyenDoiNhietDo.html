@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Nhập độ C <!--  --></p>
+  <input id="doc" type="number" placeholder="&#8451;">
+  <br>
+  <button onclick="chuyenDoi()">
+    Chuyển đổi 
+  </button>
+  <p id="ketqua"></p>
+</body>
+<script>
+  function chuyenDoi() {
+    let doC = document.getElementById('doc').value;
+    doC = parseInt(doC)
+    doF = doC * 9/5 + 32;
+  let ketQua = document.getElementById('ketqua');
+  ketQua.innerHTML = "Độ F = " + doF
+  }
+</script>
+</html>
