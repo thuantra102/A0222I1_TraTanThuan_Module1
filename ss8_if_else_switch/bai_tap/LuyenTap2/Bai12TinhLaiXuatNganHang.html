@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>Chương trình tính lãi xuất ngân hàng
+  </h4>
+  <p>
+    Số tiền bạn gởi vào ngân hàng
+  </p>
+  <input type="number"  id="tiengoi">
+  <br>
+  <p>
+    Số tháng bạn gởi vào ngân hàng
+  </p>
+  <input type="number"  id="sothang">
+  <br>
+  <button onclick="tinh()">Tính kết quả</button>
+  <p id="ketqua">
+   
+  </p>
+</body>
+<script>
+  function tinh() {
+     let tienGoi = document.getElementById('tiengoi').value;
+     tienGoi = parseInt(tienGoi)
+     let soThang = document.getElementById('sothang').value;
+     soThang = parseInt(soThang)
+     let ketQua = document.getElementById('ketqua');
+     for ( let i = 1; i <= soThang; i++ ) {
+        let tienLai = tienGoi * 0.1;
+        ketQua.innerHTML = ' Số tiền lãi của bạn là ' + tienLai + ' VND'
+        tienGoi = tienGoi + tienLai
+     }
+  }
+</script>
+</html>
