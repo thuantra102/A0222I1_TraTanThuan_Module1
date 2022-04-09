@@ -3,8 +3,8 @@
 
 <body>
     <h3>Caro Game Simple</h3>
-    <p id="carogame" />
-    <input type="button" value="Change Value" onclick="changeValue()">
+    <p id="carogame" > </p>
+  
 </body>
 <script>
   let b = document.getElementById("carogame");
@@ -28,7 +28,7 @@
     let positionX = prompt("X: ");
     let positionY = prompt("Y: ");
     data = "";
-    board[positionX][positionY] = "x";
+    board[positionX ][positionY ] = "x";
     for (let i = 0; i < 5; i++) {
         data += "<br/>";
         for (let j = 0; j < 5; j++) {

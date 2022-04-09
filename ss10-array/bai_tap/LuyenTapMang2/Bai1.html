@@ -10,16 +10,19 @@
   
 </body>
 <script>
-  let iMax = 20;
-  let jMax = 10;
-  let f = new Array();
-
-  for (i = 0; i < iMax; i++) {
-    f[i] = new Array();  // 20 ---> f(1) = new Array()
-    for (j = 0; j < jMax; j++) { // 20 lan j
-        f[i][j] = 0; // 
-    }
+  let a = [
+    [1, 2, 1, 24],
+    [8, 11, 9, 4],
+    [7, 0, 7, 27],
+    [7, 4, 28, 14],
+    [3, 10, 26, 7]
+];
+for(let i= 0; i< a.length; i++ ) {
+  for(let j = 0; j<a[i].length; j++) {
+    document.write(a[i][j] + " ")
+  }
+  document.write("<br>")
 }
-console.log(f.length)
+
 </script>
 </html>

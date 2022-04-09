@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
-<script>
-  let str1 = prompt("Nhap chuoi 1")
-  let str2 = prompt("Nhap chuoi 2")
-  if( str1==str2) {
-    alert("giong nhau")
-  } else {
-    alert("Khac Nhau")
-  }
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let array1 = prompt("Nhap chuoi 1").split(" ");
+    let array2 = prompt("Nhap chuoi  2").split(" ");
+    flat = true;
+    for (let index = 0; index < array1.length - 1; index++) {
+      if (array1[index] !==  array2[index]) {
+        flat = false;
+        break
+      }
+    }
+    if (flat == true) {
+      alert("Giống nhau");
+    } else {
+      alert("hai chuỗi không giống nhau ");
+    }
+    console.log(array1)
+    console.log(array2)
+  </script>
 </html>

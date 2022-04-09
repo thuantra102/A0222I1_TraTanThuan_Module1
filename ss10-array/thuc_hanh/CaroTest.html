@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="display"></p>
+  
+</body>
+<script>
+  let array = [];
+  // create a array having 5 elements
+  for (let index = 0; index < 5; index++) {
+    array[index] = [0,0,0,0,0]
+  }
+  // display array
+  function board() {
+    let result = "";
+  for ( let i =0; i<array.length; i++) {
+    for( let j = 0; j < array[i].length; j++) {
+      result+= array[i][j] + "&nbsp; &nbsp;  "
+    }
+    result+= '<br/>'
+  } 
+    result+=  "<button id='button' onclick='changeValue()'>Change Value</button>" 
+    document.getElementById("display").innerHTML = result;
+  }
+  board()
+ function changeValue() {
+  let x = prompt("i =");
+  let y = prompt("j = ");
+  array[x][y] = "x";
+  board()
+ }
+</script>
+</html>

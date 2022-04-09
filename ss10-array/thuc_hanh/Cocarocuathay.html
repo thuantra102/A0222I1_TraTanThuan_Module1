@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<script>
+    // gọi hàm để hiện thị
+    let array = new Array(20);
+    for (let i = 0; i <array.length ; i++) {
+        array[i]= new Array(20);
+        for (let j = 0; j <array[i].length ; j++) {
+            array[i][j]="";
+        }
+    }
+    let checkPlayer1=true;
+     display();
+​
+    // hàm hiện thị
+    function display() {
+        let tableString = '<table border="1">';
+        for (let i = 0; i < 10; i++) {
+            tableString += ' <tr>';
+            for (let j = 0; j <10; j++) {
+                tableString += '<td onclick="play('+i+','+j+')" style="width: 30px;height: 30px">'+array[i][j]+'</td>';
+            }
+            tableString += '</tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+    function play(i,j) {
+        if (checkPlayer1&&isNotData(i,j)){
+            array[i][j]="X";
+            checkPlayer1 =false;
+            if (checkWin()){
+                alert("nguời chơi 1 chiến thắng");
+            };
+        }else if (!checkPlayer1&&isNotData(i,j)){
+            array[i][j]="O";
+            checkPlayer1= true;
+            if (checkWin()){
+                alert("nguời chơi 2 chiến thắng");
+            };
+        }
+​
+         display();
+    }
+    function isNotData(i,j) {
+      if (array[i][j]==""){
+          return true;
+      }else {
+          alert("Ô này đánh rồi!!!")
+          return false;
+      }
+    }
+    function checkWin() {
+        for (let i = 0; i <array.length ; i++) {
+            for (let j = 0; j <array[i].length ; j++) {
+                if (array[i][j]=="X"){
+                    // kiểm tra hàng ngang
+                    if (array[i][j+1]=="X"&&array[i][j+2]=="X"){
+                        return true;
+                    }
+                    // kiểm tra hàng dọc
+                    if (array[i+1][j]=="X"&&array[i+2][j]=="X"){
+                        return true;
+                    }
+                    // Kiểm tra hướng Đông -Nam
+                    if (array[i+1][j+1]=="X"&&array[i+2][j+2]=="X"){
+                        return true;
+                    }
+                    // Hướng  tây- bắc
+                    if (array[i+1][j-1]=="X"&&array[i+2][j-2]=="X"){
+                        return true;
+                    }
+                }
+                if (array[i][j]=="O"){
+                    // kiểm tra hàng ngang
+                    if (array[i][j+1]=="O"&&array[i][j+2]=="O"){
+                        return true;
+                    }
+                    // kiểm tra hàng dọc
+                    if (array[i+1][j]=="O"&&array[i+2][j]=="O"){
+                        return true;
+                    }
+                    // Kiểm tra hướng Đông -Nam
+                    if (array[i+1][j+1]=="O"&&array[i+2][j+2]=="O"){
+                        return true;
+                    }
+                    // Hướng  tây- bắc
+                    if (array[i+1][j-1]=="O"&&array[i+2][j-2]=="O"){
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

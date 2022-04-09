@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+</head>
+<body>
+  <h4>English Dictionary</h4>
+  <input type="text" placeholder="Search a word" id="english-word" >
+  <br>
+  <br>
+  <button id="seach-button" onclick="seachButton()" >Search</button>
+  <p id="vietnam"></p>
+</body>
+<script>
+  let word = document.getElementById('english-word')
+  function seachButton() {
+    let english = ["Elect", "Occupy", "Annual"];
+    let vietnam = ["Bầu cử, lựa chọn", "Bận rộn", "Hằng năm"];
+    // let index = english.findIndex(item=>word.value===item);
+    // if(index=== -1) {
+    //   alert('Khong co')
+    // } else {
+    //   alert(vietnam[index])
+    // }
+      let position = -1;
+      for (let index = 0; index < english.length; index++) {
+        if(word.value === english[index]) {
+          position = index;
+        } 
+      }
+      if(position=== -1) {
+      document.getElementById("vietnam").innerHTML = "Không đúng"
+    } else {
+      document.getElementById("vietnam").innerHTML = (vietnam[position])
+    }
+  }
+</script>
+</html>

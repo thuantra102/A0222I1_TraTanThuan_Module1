@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <!-- <table border="1" style="border-collapse: collapse;">
+   <tr>
+     <td style="width: 30px; height: 30px;"></td>
+     <td style="width: 30px; height: 30px;"></td>
+   </tr>
+ </table> -->
+ <div id="display">
+
+ </div>
+</body>
+<script>
+  // tao mang co 10 phan tu va moi phan tu co mot mang chua 10 phan tu
+  let arr = new Array(10);
+  for( let i =0; i < arr.length; i++) {
+    arr[i] = new Array(10);
+    for(let j = 0; j< arr[i].length; j++) {
+      arr[i][j] = '';
+    }
+  }
+  // hien thi thong qua dang bang
+  function display() {
+    let board = '<table border="1" style="border-collapse: collapse;"> '
+      for(let i = 0; i< arr.length; i++) {
+        board+= '<tr>'
+          for (let j=0; j<arr[i].length; j++) {
+            board+= '<td style="width: 30px; height: 30px; onclick="play('+i+','+j+')" >' + arr[i][j]+ '</td>'
+          }
+        board+= '</tr>'
+      } 
+      board+= '</table>'
+      document.getElementById("display").innerHTML = board;
+  }
+  display()
+  // lam phim click x va o
+  function play(i,j) {
+    return i + j
+  }
+    
+</script>
+</html>

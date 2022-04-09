@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba4b0805-6d4e-490f-93e9-4e10fc03a5ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss11-function/bai_tap/LuyenTap2/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11-function/bai_tap/LuyenTap2/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11-function/bai_tap/LuyenTap2/Bai6..html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11-function/bai_tap/LuyenTap2/Bai7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss11-function/bai_tap/LuyenTap2/Bai8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/LuyenTapMang1/Bai7.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/LuyenTapMang1/Bai7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/LuyenTapMang1/Bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/LuyenTapMang1/Bai8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/LuyenTapMang2/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/LuyenTapMang2/Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai_tap/LuyenTapMang2/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/bai_tap/LuyenTapMang2/Bai5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuc_hanh/CoCaRo.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuc_hanh/CoCaRo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuc_hanh/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuc_hanh/test1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_git_html/thuc_hanh/TaoCvCaNhan.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_git_html/thuc_hanh/TaoCvCaNhan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_form_table/bai_tap/CoVua.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_form_table/bai_tap/CoVua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_form_table/bai_tap/FormLaySurveyKhachHang.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_form_table/bai_tap/FormLaySurveyKhachHang.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss7-bien-va-kieu-du-lieu-trong-toan-tu/bai-tap/MayTinhGooogle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7-bien-va-kieu-du-lieu-trong-toan-tu/bai-tap/MayTinhGooogle.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="27YU8SiojVAjNZjlkZwCQb8cDw2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba4b0805-6d4e-490f-93e9-4e10fc03a5ac" name="Default Changelist" comment="" />
+      <created>1649496353410</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649496353410</updated>
+      <workItem from="1649496354628" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

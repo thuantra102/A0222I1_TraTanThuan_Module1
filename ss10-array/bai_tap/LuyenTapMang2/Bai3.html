@@ -10,7 +10,16 @@
   
 </body>
 <script>
-  let arr = ['a', 'c', 5, 6, 'b'];
-  alert("So ky tu la " + arr.length)
+  let arr = [] ;
+  let result = [];
+  for (let i = 0; i < 5; i++) {
+    arr[i] = prompt()
+  }
+  for (let index = 0; index < arr.length; index++) {
+    if(arr[index] % 1 == 0) {
+        result.push(arr[index])
+    } 
+  }
+  alert(result.join("-"))
 </script>
 </html>
