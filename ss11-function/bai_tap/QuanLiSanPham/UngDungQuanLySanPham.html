@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="QuanLySanPham.css" />
+  </head>
+  <body>
+    <h3>Add New Product</h3>
+    <div class="add-new-product">
+      <input type="text" id="input-new-product" placeholder="New Product" />
+      <button id="button-add" onclick="add()">Add</button>
+    </div>
+    <h3>Display All Product</h3>
+    <div class="product-name-and-number">
+      <p class="product-title">Product</p>
+      <p id="number-of-product"></p>
+    </div>
+    <p id="display"></p>
+
+    <script>
+      const inputNewProduct = document.getElementById("input-new-product");
+      const buttonAdd = document.getElementById("button-add");
+      const displayProduct = document.getElementById("display");
+      const numberOfProduct = document.getElementById("number-of-product");
+      let isAdd = true;
+      let indexcurrent = 0;
+      let productList = [
+        "Sony Xperia",
+        "SamSung Galaxy",
+        "Nokia 6",
+        "Xiaomi Redmi Note 4",
+      ];
+      function display(list) {
+        let table = "<table>";
+        for (let i = 0; i < list.length; i++) {
+          table +=
+            "<tr>" +
+            '<td style="width: 300px;">' +
+            list[i] +
+            "</td>" +
+            '<td style="width: 100px;"><button class="button-add-delete" onclick= "edit(' +
+            i +
+            ' )">Edit</button></td>' +
+            '<td><button class="button-add-delete" onclick = "deleteProduct(' +
+            i +
+            ')">Delete</button></td>' +
+            "</tr>";
+        }
+        table += "</table>";
+        displayProduct.innerHTML = table;
+        numberOfProduct.innerHTML = list.length + " Products";
+      }
+      display(productList);
+
+      function add() {
+        let newProduct = inputNewProduct.value;
+        if (newProduct != "") {
+          isAdd
+            ? productList.push(newProduct)
+            : ((productList[indexcurrent] = newProduct),
+              (buttonAdd.innerHTML = "Add"),
+              (isAdd = true));
+        } else {
+          alert("Bạn cần phải nhập thông tin sản phẩm");
+        }
+        display(productList);
+        inputNewProduct.value = "";
+      }
+
+      function edit(index) {
+        inputNewProduct.value = productList[index];
+        buttonAdd.innerHTML = "Save";
+        isAdd = false;
+        indexcurrent = index;
+      }
+
+      function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xóa sản phẩm " + productList[index]);
+        if (conf) {
+          productList.splice(index, 1);
+        }
+        display(productList);
+      }
+    </script>
+  </body>
+</html>

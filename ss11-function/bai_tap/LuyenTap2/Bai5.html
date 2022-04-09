@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkMin(a,b,c) {
+    let min = a;
+    if( b < a && b < c) {
+        min = b
+    } else if ( c < a && c < b) {
+        min = c
+    } else  {
+        min = a
+    }
+    return min
+
+
+    }
+    let x = parseInt(prompt("Nhap so a"))
+    let y = parseInt(prompt("Nhap so b"))
+    let z = parseInt(prompt("Nhap so z"))
+    let result = checkMin(x,y,z);
+    alert(result)
+
+</script>
+</body>
+</html>

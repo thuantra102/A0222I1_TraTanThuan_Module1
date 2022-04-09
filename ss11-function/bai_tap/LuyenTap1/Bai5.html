@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function getValue(x) {
+        let position = -1;
+        for (let i = 0; i < array1.length; i++) {
+            if (x == array1[i]) {
+                position = i;
+                return position
+            }
+
+        }
+        return position
+    }
+
+    let value = prompt("Nhap sao ban muon tim")
+    let index = getValue(value);
+    if(index === -1) {
+        alert("Khong phu hop")
+    } else {
+        alert("Ngoi sao " + value + " co chom sao la " + array2[index])
+    }
+
+
+
+
+
+</script>
+</html>

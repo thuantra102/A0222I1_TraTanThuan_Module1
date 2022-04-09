@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="input" oninput="caculate()">
+  <span id="result"></span>
+</body>
+<script>
+  function square(number) {
+    let result = number * number;
+    return result
+  }
+  function caculate() {
+    let input = document.getElementById("input").value;
+    let result = square(input);
+    document.getElementById("result").innerText = "ket qua la " + result
+  }
+</script>
+</html>

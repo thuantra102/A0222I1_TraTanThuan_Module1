@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(input) {
+        let count = 0;
+        for (let i = 0; i < input.length; i++) {
+            if (value === input[i]) {
+                count++
+            }
+
+        }
+        return count
+    }
+
+    let array1 = [];
+    let inputArray1 = prompt("Nhập mảng ký tự");
+    for (let i = 0; i < inputArray1.length; i++) {
+        array1.push(inputArray1[i]);
+
+    }
+    let value = prompt("Nhập ký tự bất kỳ bạn muốn kiểm tra ");
+    let result = checkArray(array1);
+    if (result != 0) {
+        alert("Số lần xuất hiện của ký tự đó là " + result)
+    } else {
+        alert("-1")
+    }
+
+</script>
+</body>
+</html>
