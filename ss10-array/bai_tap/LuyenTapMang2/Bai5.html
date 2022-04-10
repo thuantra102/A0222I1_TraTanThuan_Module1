@@ -8,21 +8,23 @@
   </head>
   <body></body>
   <script>
-    let array1 = prompt("Nhap chuoi 1").split(" ");
-    let array2 = prompt("Nhap chuoi  2").split(" ");
-    flat = true;
-    for (let index = 0; index < array1.length - 1; index++) {
-      if (array1[index] !==  array2[index]) {
-        flat = false;
-        break
+    let str1 = prompt("Nhập vào chuỗi 1");
+    let str2 = prompt("Nhập vào chuỗi 2");
+    let flag = true;
+    if (str1.length == str2.length) {
+      for (let i = 0; i < str1.length; i++) {
+        if (str1.charAt(i) != str2.charAt(i)) {
+          flag = false;
+          break;
+        }
       }
-    }
-    if (flat == true) {
-      alert("Giống nhau");
     } else {
-      alert("hai chuỗi không giống nhau ");
+      flag = false;
     }
-    console.log(array1)
-    console.log(array2)
+    if (flag) {
+      alert("chuỗi giống nhau");
+    } else {
+      alert("chuỗi không  giống nhau");
+    }
   </script>
 </html>
