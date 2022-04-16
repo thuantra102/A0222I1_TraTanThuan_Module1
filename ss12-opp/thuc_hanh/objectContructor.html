@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function User(firstName, lastName, avatar) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.avatar = avatar;
+      this.getName = function() {
+      return  `${this.firstName} ${this.lastName}`
+      }
+    }
+    User.prototype.className = 'F8';
+    User.prototype.getClassName = function() {
+      return this.className
+    }
+    let author = new User('Thuan', 'Tra', 'Avatar', );
+    let user = new User('Vu', 'Nguyen', 'Avatar');
+    
+    author.title = 'Chia se tai f8';
+    user.comment = 'Lieu cos khoa moi';
+    
+    console.log(author.getClassName());
+    console.log(user.getName())
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="area"></p>
+    <p id="perimeter"></p>
+    <canvas
+      id="myCanvas"
+      width="500px"
+      height="500px"
+      style="border: 3px solid red"
+    ></canvas>
+    <script>
+      let area = document.getElementById("area");
+      let perimeter = document.getElementById("perimeter");
+      function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+        this.getPerimeter = function () {
+          return (width + height) / 2;
+        };
+        this.getArea = function () {
+          return width * height;
+        };
+      }
+      let width = parseInt(prompt("Nhap chieu dai"));
+      let height = parseInt(prompt("Nhap chieu rong"));
+      let rectangle = new Rectangle(width, height);
+      area.innerHTML = "Diện tích hình chứ nhật là " + rectangle.getArea();
+      perimeter.innerHTML =
+        "Chu vi hình chữ nhât là " + rectangle.getPerimeter();
+
+      function createRectangle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        ctx.beginPath();
+        ctx.lineWidth = "1";
+        ctx.strokeStyle = "green";
+        ctx.rect(35, 30, rectangle.width, rectangle.height);
+        ctx.stroke();
+      }
+      createRectangle();
+    </script>
+  </body>
+</html>

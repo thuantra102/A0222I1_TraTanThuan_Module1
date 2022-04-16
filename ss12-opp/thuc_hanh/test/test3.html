@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let emailKey = 'email'
+    let myInfo = {
+      name: 'Thuan Tra',
+      age: 18,
+      address: 'Da Nang',
+      [emailKey]: "thuantra102@gmail.com",
+      getName: function () {
+        return this.name;
+      }
+    }
+    // let myKey = 'address'
+    // console.log(myInfo);
+    // myInfo.email = 'thuantra102@gmail.com'
+    // myInfo["my-PhoneNumber"] = 0705486029;
+    // console.log(myInfo.name)
+    delete myInfo.age
+    console.log(myInfo.getName())
+
+
+    // funtion --> phương thúc // method
+    // others --> thuộc tính // property
+    
+
+  </script>
+</body>
+</html>delete myInfo.age

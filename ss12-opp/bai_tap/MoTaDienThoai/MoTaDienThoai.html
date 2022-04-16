@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  
+</head>
+<body>
+  <p>Nokia</p> 
+  <span>Soạn tin nhắn </span>
+  <span><input type="text" id="sendNokia"></span>
+  <span><button onclick="sendMessage()">Gởi tin</button></span>
+  <p>Tin nhắn nhận<span id="inboxNokia"></span></p>
+  <p>Tin nhắn đã gởi: <span id="sentNokia"></span> </p>
+  <p>Trạng thái pin là <span id="batteryNokia"></span></p>
+  <p>Trạng thái hoạt động:  <span id="statusNokia"></span> </p>
+  <button onclick="controlStatus('nokia')">Điểu khiển điện thoại</button>
+  <br>
+  <button onclick="chargeBattery('nokia')">Xạc pin</button>
+  <hr>
+  
+  <p>Iphone</p> 
+  <span>Soạn tin nhắn </span>
+  <span><input type="text" id="sendIphone"></span>
+  <span><button onclick="sentMessage()">Gởi tin</button></span>
+  <p>Tin nhắn nhận: <span id="inboxIphone"></span></p>
+  <p>Tin nhắn đã gởi <span id="sentedIphone"></span> </p>
+  <p>Trạng thái pin là <span id="batteryIphone"></span></p>
+  <p>Trạng thái hoạt động: <span id="statusIphone"></span> </p>
+  <button onclick="controlStatus()">Điệu khiển điện thoại</button>
+  <br>
+  <button onclick="chargeBattery()">Xạc pin</button>
+  <script src="style.js"></script>
+  
+  
+ 
+  
+  
+
+  <!-- <script>
+   
+    
+    function Mobile(battery,compose,inbox, sent, status,name) {
+      this.battery = battery;
+      this.compose = compose;
+      this.inbox = inbox;
+      this.sent = sent;
+      this.status = status;
+      this.name = name;
+      this.checkMobile = function() {
+        if(status) {
+          return "Bật"
+        } else {
+          return "Tắt"
+        }
+        
+      }
+      this.controlMobile = function() {
+        return this.status = !this.status
+      }
+      this.chargeBattery = function() {
+        return this.battery + 10;
+        
+      };
+      this.receiveMessaege = function() {
+        
+      }
+      
+    }
+    composeNokia =[];
+    inboxNokia = []; 
+    sentNokia =[];
+    
+    
+    composeIphone = [];
+    inboxIphone = [];
+    sentIphone = [];
+    let iphone = new Mobile(80, composeIphone, inboxIphone, sentIphone, false,"Iphone")
+    let nokia = new Mobile(50,composeNokia,inboxNokia, sentNokia, true,"Nokia");
+    // check trang thai hoat dong cua may 
+    function getStatus(phone) {
+      let checkPhone = phone.checkMobile();
+      if(checkPhone == "Bật") {
+ 
+         document.getElementById("status" + phone.name).innerHTML = "Bật"
+      } else {
+        document.getElementById("status" + phone.name).innerHTML = "Tắt"
+      }
+    }
+    getStatus(nokia);
+    getStatus(iphone);
+
+    // chuc nang bat tat /// Nokia
+    function control(phoneName) {
+      let control;
+      let mobile;
+      if(phoneName == "nokia"){
+         control = nokia.controlMobile();
+         mobile = nokia;
+      } else {
+          control = iphone.controlMobile();
+          mobile = iphone;
+      }     
+      if(control == false) {
+        document.getElementById("status"+mobile.name).innerHTML = "Tắt"
+      } else {
+        document.getElementById("status"+mobile.name).innerHTML = "Bật";
+        
+      }
+
+
+    }
+    // trang thai phin 
+    function battery(phoneName) {
+      let checkBattery = phoneName.battery;
+      
+    } 
+    // xac pin
+    function charge(phoneName) {
+      let control;
+      let mobile;
+      // if(phoneName == 'nokia' {
+      //   mobile = nokia;
+
+      // }
+    }
+
+
+
+ 
+  </script>
+   -->
+</body>
+</html>
