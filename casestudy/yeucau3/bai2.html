@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arrA =[7,2,5,3,5,3];
+    let arrB =[7,2,5,4,6,3,5,3];
+    let result = []
+    for(let i = 0; i < arrA.length; i ++) {
+      for(let j =0; j < arrB.length; j++) {
+        if(arrB[j] === arrA[i]) {
+          arrB.splice(j,1)
+        }
+      }
+    }
+    result.push(arrB);
+    alert(result)
+  </script>
+</body>
+</html>

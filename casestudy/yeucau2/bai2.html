@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  let flat = false;
+  let check = ['u', 'i', 'a', 'e','o','O', 'U', 'I', 'A', 'E']
+  let search = prompt("nhap chu ban check")
+  for (let index = 0; index < check.length; index++) {
+    if(search === check[index]) {
+      flat = true;
+      break;
+    } 
+    
+  }
+  if(flat) {
+    alert("ký tự nguyên âm")
+  } else  {
+    alert("Phu am")
+  }
+  </script>
+</body>
+</html>
