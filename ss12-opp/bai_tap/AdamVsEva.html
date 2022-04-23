@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="human('adam')">Adam Eats An Apple</button>
+  <button onclick="human('eva')">Eva Eats An Apple</button>
+  <script>
+    class Apple {
+      constructor() {
+        this.weigth = 10;
+      }
+      decrease() {
+        if(this.weigth>0) {
+          this.weigth --
+        }
+      }
+      isEmpty() {
+        if(this.weigth == 0) {
+          return true
+        } else {
+          return false
+        }
+      }
+    }
+    class Human {
+      constructor(name,gender,weigth) {
+        this.name = name;
+        this.gender =gender;
+        this.weigth = weigth;
+      }
+
+      
+      eatApple(apple) {
+        if(apple.isEmpty()== false) {
+          apple.decrease()
+          this.weigth++
+          alert("Tao van con " + apple.weigth)
+          alert("Can nang cua " + this.name + " " + this.weigth)
+        } else {
+          console.log("Het roi")
+          alert("Tao het roi" )
+          alert("Can nang cua" + this.name + " " + cannang)
+        }
+      } 
+    }
+    let tao = new Apple();
+    let adam = new Human("adam","Nam", 30);
+    let eva = new Human("eva","Nu", 20);
+    function human(namePerson) {
+      let person = namePerson === "adam" ? adam : eva;
+      person.eatApple(tao)
+    }
+    
+  </script>
+</body>
+</html>

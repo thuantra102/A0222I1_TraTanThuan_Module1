@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  class Mobile{
+    constructor(id, name) {
+      this.id = id;
+      this.name= name;
+      this.message = [];
+      this.chung = ""
+    }
+    setMessage(message)  {
+      this.message.push(message)
+      for (let index = 0; index < this.message.length; index++) {
+        chung += `tinnhan${index} la ${this.message[0]}`
+        
+      }
+    }
+    getMessage() {
+     return chung
+    }
+    sendMessage(message, mobile) {
+      mobile.setMessage(message);
+    }
+  }
+  let iphone = new Mobile(1, "Iphone");
+  let android = new Mobile(2, "Nokia");
+  iphone.sendMessage("message from iphone nha", android);
+  iphone.sendMessage("message from ok", android);
+
+  alert(android.getMessage());
+</script>
+</html>

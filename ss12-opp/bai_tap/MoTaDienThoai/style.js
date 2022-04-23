@@ -1,11 +1,12 @@
 
-function Mobile(battery, status,name,) {
+function Mobile(battery, status,name) {
   this.battery = battery;
-  this.inbox = [];
-  this.send = [];
   this.status = status;
   this.name = name;
-  this.messageMobile = [];
+  this.messages = {
+    messageSend : [],
+    messageRecive : []
+  }
 
   this.checkMobile = function() {
     if(status) {
@@ -21,51 +22,37 @@ function Mobile(battery, status,name,) {
     this.battery += 10;
     return this.battery;
   }
-  this.getMessageMobile = function() {
-    let message = "";
-    for(let i = 0; i < this.messageMobile.length; i++) {
-      message += this.messageMobile[i];
-      return message
+
+  this.getstringMessage = function(type) {
+    return this.messages[type].reduce((prev,next) => prev + "<br />" + next,"");
+  }
+  this.reduceBattery = function() {
+    this.battery = this.battery - 10;
+    if(this.battery < 0) {
+      this.battery = 0;
     }
   }
-  this.getSend = function() {
-   return  this.send.push(message);
-    
-  }
 
-  
 }
-let nokia = new Mobile(20, true,"Nokia");
-let iphone = new Mobile(80,false,"Iphone");
+let nokia = new Mobile(10, true,"Nokia");
+let iphone = new Mobile(5,false,"Iphone");
 
-// bat tat 
+// status
 function getStatus(phoneName) {
   let checkPhone = phoneName.checkMobile();
-  if(checkPhone == 'Bật') {
-    document.getElementById("status" + phoneName.name).innerHTML = "Bật";
-  } else {
-    document.getElementById("status" + phoneName.name).innerHTML = "Tắt"
-  }
+  document.getElementById(`status${phoneName.name}`).innerHTML = 
+  (checkPhone === "Bật" ? "Bật" : "Tắt");
 }
 getStatus(nokia)
 getStatus(iphone)
 // dieu khieu bat tat
 function controlStatus(phoneName) {
-  let mobile;
-  let control;
-  if(phoneName == "nokia") {
-    mobile = nokia;
-    control = nokia.controlMobile()
-  } else {
-    mobile = iphone;
-    control = iphone.controlMobile()
-  }
-  if(control == false) {
-    document.getElementById("status" + mobile.name).innerHTML = "Tắt";
-  } else {
-    document.getElementById("status" + mobile.name).innerHTML = "Bật";
-  }
+  let mobile = phoneName === "nokia" ? nokia : iphone;
+  let control = mobile.controlMobile();
+  document.getElementById(`status${mobile.name}`).innerHTML = 
+  (!control ? "Tắt" : "Bật");
 }
+// hien thin pin
 function getBattery(phoneName) {
   let checkBattery = phoneName.battery;
   document.getElementById("battery" + phoneName.name).innerHTML = checkBattery + "%"
@@ -74,24 +61,40 @@ getBattery(nokia)
 getBattery(iphone)
 // xac phin
 function chargeBattery(phoneName) {
-  let mobile;
-  let charge;
-  if (phoneName == "nokia") {
-    mobile = nokia;
-    charge = nokia.chargeBattery();
-  } else {
-    mobile = iphone;
-    charge = iphone.chargeBattery();
-  }
-   document.getElementById("battery" + mobile.name).innerHTML = charge + "%"
+  let mobile = phoneName === "nokia" ? nokia : iphone;
+  let charge = mobile.chargeBattery();
+   document.getElementById("battery" + mobile.name).innerHTML = `${charge}%`
     if(charge > 100) {
        alert("Pin đầy")
        document.getElementById("battery" + mobile.name).innerHTML =  "100%"
     }
 }
-function sendMessage() {
-  let message = document.getElementById("sendNokia").value;
-  nokia.messageMobile.push = message;
-  document.getElementById("sentNokia").innerHTML = nokia.getSend()
+// goi tin nhan 
+function sendMessage(phoneName) {
+  let message = document.getElementById(`send${phoneName}`).value;
+  let mobile = phoneName === "Nokia" ? nokia : iphone;
+  if(mobile.battery>0) {
+    if(mobile.status) {
+      if (phoneName === "Nokia") {
+        nokia.messages.messageSend.push(message);
+        iphone.messages.messageRecive.push(message);
+        document.getElementById(`sentNokia`).innerHTML = nokia.getstringMessage("messageSend");
+        document.getElementById(`inboxIphone`).innerHTML = iphone.getstringMessage("messageRecive");
+        
+      }
+     else {
+      nokia.messages.messageRecive.push(message);
+      iphone.messages.messageSend.push(message);
+        document.getElementById(`inboxNokia`).innerHTML = nokia.getstringMessage("messageRecive");
+        document.getElementById(`sentIphone`).innerHTML = iphone.getstringMessage("messageSend");
+      }
+     mobile.reduceBattery();
+      getBattery(mobile);
+    } else {
+      alert(`Bạn phải bật điện thoại ${phoneName} lên trước đã`)
+    }
+  } else {
+    alert( `Điện thoại ${phoneName} hết pin rồi. Xạc lên đi`)
+  }
 }
-console.log(nokia.getMessageMobile());
+
