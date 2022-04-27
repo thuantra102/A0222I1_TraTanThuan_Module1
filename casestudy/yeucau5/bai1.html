@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let hangNgang = parseInt(prompt("Số hàng ngang"))
+    let hangDoc = parseInt(prompt("Số hàng dọc"));
+    let arr = new Array();
+    let tong = 0;
+    for(let i =0 ; i < hangNgang; i ++) {
+      arr[i] =new Array()
+      for(let j =0; j < hangDoc; j ++) {
+        let value =parseInt(prompt(`Nhập giá trị của hàng ${i} cột ${j}`));
+        arr[i][j] = value;
+        if(value%2 == 0) {
+          tong += value
+        }
+      }
+    }
+    document.write(`Tổng các số chẵn có trong mảng là ${tong}`)
+
+    console.log(arr)
+  </script>
+</body>
+</html>

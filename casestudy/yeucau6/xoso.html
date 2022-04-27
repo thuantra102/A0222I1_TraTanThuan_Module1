@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Xổ Số CodeGym</h3>
+
+  <p id="displayTable"></p>
+  <script>
+    
+    let table = ""
+    function setTable(so1,so2,so3,so4,so5) {
+      table = '<table border="1" style="width: 400px; border-collapse: collapse; ">'
+        table += '<tr>'
+          table += '<td>'+so1+'</td>'
+          table += '<td>'+so2+'</td>'
+          table += '<td>'+so3+'</td>'
+          table += '<td>'+so4+'</td>'
+          table += '<td>'+so5+'</td>'
+        table += '</tr>'
+        table += '<tr>'
+          table += '<td>0</td>'
+          table += '<td>0</td>'
+          table += '<td>0</td>'
+          table += '<td>0</td>'
+          table += '<td>0</td>'
+        table += '</tr>'
+      table += '</table>'
+      table += '<button>Mua vé</button>'+'<button>Xem kết quả</button>'
+      document.getElementById('displayTable').innerHTML = table;
+    }
+
+    setTable(xoso.so1,xoso.so2,xoso.so3,xoso.so4,xoso.so5)
+    
+    class XoSo {
+      constructor(so1,so2,so3,so4,so5) {
+        this.so1 = so1;
+        this.so2 = so2;
+        this.so3 = so3;
+        this.so4 = so4;
+        this.so5 = so5;
+      }
+      randomNuber() {
+        this.so1 = Math.floor(Math.random() * 99);
+        this.so2 = Math.floor(Math.random() * 99);
+        this.so3 = Math.floor(Math.random() * 99);
+        this.so4 = Math.floor(Math.random() * 99);
+        this.so5 = Math.floor(Math.random() * 99);
+      }
+      setNumber(so1) {
+        this.so1 = so1
+      }
+      setNumber(so2) {
+        this.so1 = so2
+      }
+      setNumber(so3) {
+        this.so1 = so3
+      }
+      setNumber(so4) {
+        this.so1 = so4
+      }
+      setNumber(so5) {
+        this.so1 = so5
+      }
+      showNumber() {
+        
+      }
+    }
+    let xoso = new XoSo(2,3,4,5,6);
+    console.log(xoso.so1)
+    setTable()
+   
+  </script>
+</body>
+</html>

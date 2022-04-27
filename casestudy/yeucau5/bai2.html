@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hangNgang = parseInt(prompt("Số hàng ngang"));
+      let hangDoc = parseInt(prompt("Số hàng dọc"));
+      let arr = new Array();
+      let soNguyenTo = [];
+      for (let i = 0; i < hangNgang; i++) {
+        arr[i] = new Array();
+        for (let j = 0; j < hangDoc; j++) {
+          let value = parseInt(prompt(`Nhập giá trị của hàng ${i} cột ${j}`));
+          arr[i][j] = value;
+          if (checkNumber(arr[i][j])) {
+            soNguyenTo.push(arr[i][j]);
+          }
+        }
+      }
+
+      function checkNumber(number) {
+        if (number < 2) {
+          return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i===0) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+      document.write(`Số nguyên tố là ${soNguyenTo}`);
+      console.table(arr);
+    </script>
+  </body>
+</html>

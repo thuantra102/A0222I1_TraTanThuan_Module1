@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
-    let check = prompt("Nhập món bạn chon : \n" + 
-    "1. Cafe \n"+
-    "2. Cam vắt \n" +
-    "3. Nước ép cà rốt \n" + 
-    "4. Nước ép cà chua \n" + 
-    "5. Nước lọc \n" + 
-    "6. Nước dừa \n" 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let tongtien = 0;
+      let check;
+      do {
+       check = parseInt(
+        prompt(
+          "Nhập món bạn chon : \n" +
+            "1. Cafe \n" +
+            "2. Cam vắt \n" +
+            "3. Nước ép cà rốt \n" +
+            "4. Nước ép cà chua \n" +
+            "5. Nước lọc \n" +
+            "6. Nước dừa \n" +
+            "7. Thoát\n"
+        )
+      );
+        switch (check) {
+          case 1:
+            alert("Cafe Gía 5K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 5;
+            break;
 
-     )
-  </script>
-</body>
+          case 2:
+            alert("Cam Vắt Gía 10K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 10;
+            break;
+
+          case 3:
+            alert("Nước ép cà rốt Gía 15K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 15;
+            break;
+
+          case 4:
+            alert("Nước ép ca chua Gía 15K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 15;
+            break;
+
+          case 5:
+            alert("Nước lọc Gía 3K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 3;
+            break;
+
+          case 6:
+            alert("Nước dừa Gía 20K");
+            soluong = parseInt(prompt("Số lượng"));
+            tongtien += soluong * 20;
+            break;
+
+
+        }
+      } while (check != 7)
+      alert("Tổng tiền của bạn là " + tongtien + "K");
+    </script>
+  </body>
 </html>

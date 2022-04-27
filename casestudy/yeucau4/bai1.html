@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let check = prompt("Nhap xau ky tu");
+      let checkToString = check.toLowerCase().split(" ");
+      let nameSpace;
+      let max = 0;
+      let maxString;
+      function changeName() {
+        for (let i = 0; i < checkToString.length; i++) {
+          if (checkToString[i] === "") {
+            checkToString.splice(i, 1);
+            i = i - 1;
+          }
+        }
+        let checkMax = checkToString.join(" ").split(" ");
+        for(let i = 0; i< checkMax.length; i ++) {
+          if(checkMax[i].length > max) {
+            max = checkMax[i].length;
+            maxString = checkMax[i];
+          }
+          
+        }
+        console.log(checkMax)
+        nameSpace = checkToString.join(" ").split("");
+          for (let i = 0; i < nameSpace.length; i++) {
+          
+            if (nameSpace[i] === " ") {
+
+            nameSpace[i + 1] = nameSpace[i + 1].toUpperCase();
+          }
+        }
+        nameSpace[0] = nameSpace[0].toUpperCase();
+      }
+      changeName()
+
+      alert("Ten ban dau " + check + "\n" 
+      + "Ten sau chuyen " + nameSpace.join(" ") + "\n" +
+      "Ki tu dai nhat la " + maxString )
+    </script>
+  </body>
+</html>
